@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ضرب‌المثل‌یار — بازی حدس ضرب‌المثل و کلمه‌ساز فارسی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night: #131B33;
+    --night-2: #1D2A4D;
+    --panel: #24325C;
+    --ember: #E8A33D;
+    --ember-dim: #B97D2A;
+    --rust: #C1502E;
+    --sage: #7FA872;
+    --parchment: #F2E8D5;
+    --thread: #D9C9A3;
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html,body{ height:100%; }
+  body{
+    background:
+      linear-gradient(rgba(19,27,51,0.55), rgba(19,27,51,0.75)),
+      url("background.jpg") no-repeat center center / cover fixed,
+      var(--night);
+    color: var(--parchment);
+    font-family: 'Vazirmatn', sans-serif;
+    line-height: 1.9;
+  }
+  .wrap{ max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+  header.hero{
+    padding: 64px 0 56px;
+    text-align: center;
+  }
+  .app-icon{
+    width: 96px; height: 96px;
+    border-radius: 22px;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.45);
+    margin-bottom: 22px;
+  }
+  h1{
+    font-family: 'Lalezar', sans-serif;
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    color: var(--ember);
+    letter-spacing: 0.5px;
+  }
+  .tagline{
+    margin-top: 14px;
+    font-size: 1.05rem;
+    color: var(--thread);
+    max-width: 480px;
+    margin-inline: auto;
+  }
+  .kilim-rule{
+    height: 10px;
+    margin: 36px auto 0;
+    max-width: 420px;
+    background: repeating-linear-gradient(
+      45deg,
+      var(--ember) 0 10px,
+      var(--rust) 10px 20px,
+      var(--night-2) 20px 30px
+    );
+    border-radius: 4px;
+    opacity: 0.85;
+  }
+
+  .cta-row{
+    display:flex;
+    justify-content:center;
+    margin-top: 30px;
+  }
+  .cta{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background: var(--ember);
+    color: var(--night);
+    font-family:'Vazirmatn', sans-serif;
+    font-weight:700;
+    font-size: 1.05rem;
+    padding: 14px 30px;
+    border-radius: 14px;
+    text-decoration:none;
+    box-shadow: 0 10px 24px rgba(232,163,61,0.25);
+  }
+
+  section{ padding: 46px 0; border-top: 1px solid rgba(217,201,163,0.15); }
+  section h2{
+    font-family: 'Lalezar', sans-serif;
+    color: var(--ember);
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+  }
+  section p{ color: var(--thread); max-width: 640px; }
+
+  .feature-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+  }
+  .feature{
+    background: rgba(36,50,92,0.55);
+    border: 1px solid rgba(217,201,163,0.15);
+    border-radius: 16px;
+    padding: 20px;
+  }
+  .feature .mark{
+    display:inline-flex;
+    align-items:center; justify-content:center;
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: rgba(232,163,61,0.15);
+    color: var(--ember);
+    font-family:'Lalezar', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  .feature h3{
+    font-family:'Vazirmatn', sans-serif;
+    font-weight:700;
+    font-size: 1.05rem;
+    color: var(--parchment);
+    margin-bottom: 6px;
+  }
+  .feature p{ color: var(--thread); font-size: 0.92rem; margin:0; }
+
+  .stat-row{
+    display:flex;
+    gap: 34px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .stat b{
+    display:block;
+    font-family:'Lalezar', sans-serif;
+    font-size: 2rem;
+    color: var(--ember);
+  }
+  .stat span{ color: var(--thread); font-size: 0.9rem; }
+
+  footer{
+    padding: 40px 0 60px;
+    text-align:center;
+    color: var(--thread);
+    font-size: 0.85rem;
+  }
+  footer a{ color: var(--ember); text-decoration:none; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <img class="app-icon" src="icon-512.png" alt="آیکون ضرب‌المثل‌یار">
+    <h1>ضرب‌المثل‌یار</h1>
+    <p class="tagline">حرف‌ها و کلمه‌ها رو بچین، ضرب‌المثل‌های فارسی رو کشف کن — یه بازی فکری ساده و اعتیادآور برای هر سنی.</p>
+    <div class="kilim-rule"></div>
+    <div class="cta-row">
+      <a class="cta" href="https://myket.ir/app/io.github.mojtaba5496.twa" target="_blank" rel="noopener">📲 نصب از مایکت</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>بازی چیه؟</h2>
+    <p>
+      ضرب‌المثل‌یار یه بازی حدس کلمه به سبک فارسیه. تو هر مرحله، یه سری حرف بهت داده میشه که باید به ترتیب درست
+      بچینیش تا کلمه یا ضرب‌المثل ساخته بشه. هر چی جلوتر بری، مراحل سخت‌تر و کلمه‌ها بیشتر میشن.
+    </p>
+  </section>
+
+  <section>
+    <h2>امکانات بازی</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="mark">۱۴۰</div>
+        <h3>ضرب‌المثل واقعی فارسی</h3>
+        <p>۱۴۰ ضرب‌المثل معروف که هر کدوم به‌عنوان «غول آخر» یه مرحله ظاهر میشن.</p>
+      </div>
+      <div class="feature">
+        <div class="mark">۹۸۰</div>
+        <h3>مرحله‌ی کلمه‌ساز</h3>
+        <p>از یه دسته حرف، چند تا کلمه‌ی مختلف بساز — هر مرحله حروف و کلمات تازه داره.</p>
+      </div>
+      <div class="feature">
+        <div class="mark">🪙</div>
+        <h3>سکه و راهنما</h3>
+        <p>با حل‌کردن مراحل سکه جمع کن، و هر وقت گیر کردی از راهنما کمک بگیر.</p>
+      </div>
+      <div class="feature">
+        <div class="mark">🎧</div>
+        <h3>موزیک و جلوه‌ی صوتی</h3>
+        <p>فضای صوتی دلنشین با موسیقی پس‌زمینه و صدای تشویق موقع برد.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>برای چه کسانیه؟</h2>
+    <p>
+      برای هرکسی که دوست داره فارسی‌ش رو محک بزنه، وقتشو با یه بازی فکری آروم پر کنه، یا با فرهنگ ضرب‌المثل‌های
+      ایرانی بیشتر آشنا بشه — از نوجوون تا بزرگسال.
+    </p>
+  </section>
+
+  <footer>
+    ساخته‌شده با ❤️ برای فارسی‌زبان‌ها ·
+    <a href="https://mojtaba5496.github.io/Zarbolmassal/" target="_blank" rel="noopener">نسخه‌ی وب بازی</a>
+  </footer>
+</div>
+
+</body>
+</html>
